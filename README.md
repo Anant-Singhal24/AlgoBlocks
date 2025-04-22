@@ -29,7 +29,6 @@ The project is organized into two main directories:
 ### Client (.env)
 
 ```
-REACT_APP_API_URL=http://localhost:5000/api
 REACT_APP_FINANCIAL_MODELING_PREP_API_KEY=your_api_key_here
 ```
 
@@ -40,7 +39,6 @@ PORT=5000
 NODE_ENV=development
 MONGO_URI=mongodb://localhost:27017/algoblocks
 JWT_SECRET=your_jwt_secret_key
-ALPHA_VANTAGE_API_KEY=your_api_key_here
 ALPHA_VANTAGE_API_KEY=your_api_key_here
 FINANCIAL_MODELING_PREP_API_KEY=your_api_key_here
 ```

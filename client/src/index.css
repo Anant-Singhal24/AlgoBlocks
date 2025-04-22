@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Core Responsive Settings */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md transition-all duration-200 font-medium;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-600 text-white hover:bg-secondary-700;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-900 dark:text-white;
+  }
+}
+
+/* Responsive Layout Utilities */
+.responsive-container {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-full;
+}
+
+.responsive-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+}
+
+.responsive-table-container {
+  @apply overflow-x-auto -mx-4 sm:-mx-0;
+}
+
+.responsive-table-container table {
+  @apply min-w-full;
+}
+
+/* Ensure mobile responsiveness */
+@media (max-width: 640px) {
+  .responsive-flex {
+    @apply flex flex-col;
+  }
+
+  .responsive-col {
+    @apply w-full mb-4;
+  }
+
+  .responsive-nav {
+    @apply fixed top-0 left-0 w-full h-screen bg-white dark:bg-gray-900 z-50 transform transition-transform duration-300;
+  }
+
+  .responsive-hidden-mobile {
+    @apply hidden;
+  }
+}
+
+/* Drag and Drop Styles */
+.is-dragging {
+  cursor: grabbing !important;
+}
+
+/* Improve visual feedback for draggable items */
+[data-rbd-draggable-id] {
+  transition: all 0.2s ease;
+}
+
+[data-rbd-draggable-id][data-rbd-draggable-context-id]:active {
+  cursor: grabbing;
+}
+
+[data-rbd-drag-handle-draggable-id] {
+  cursor: grab;
+}
+
+[data-rbd-drag-handle-draggable-id]:active {
+  cursor: grabbing;
+}
+
+/* Make sure the dragging item stays visible */
+[data-rbd-draggable-id].dragging {
+  z-index: 9999;
+}
+
+/* Styles for the placeholder while dragging */
+[data-rbd-placeholder-context-id] {
+  opacity: 0.3;
+  background: #e2e8f0;
+  border-radius: 0.375rem;
+}
+
+/* Responsive tables */
+.table-responsive {
+  @apply w-full overflow-x-auto;
+}
+
+.table-responsive table {
+  @apply w-full whitespace-nowrap;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive form elements */
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+/* Responsive typography */
+.text-responsive {
+  @apply text-sm sm:text-base md:text-lg;
+}

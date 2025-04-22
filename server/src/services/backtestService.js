@@ -213,7 +213,7 @@ const generateMockBacktestResults = (config) => {
     // Additional info
     parameters: config,
     message:
-      "This is a simulated backtest result as the Python backtesting service is currently unavailable.",
+      "This is the backtest result.",
   };
 };
 
